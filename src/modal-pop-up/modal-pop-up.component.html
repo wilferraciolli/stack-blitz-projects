@@ -1,0 +1,8 @@
+<button (click)="showPopup()">show/Hide modal</button>
+
+<div class="popup-container" [ngClass]="{ show: isPopupVisible }">
+  <div class="popup-message">
+    <button (click)="showPopup()">Click me!</button>
+    This is the pop-up message.
+  </div>
+</div>

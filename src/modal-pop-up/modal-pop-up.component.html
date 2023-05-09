@@ -1,8 +1,13 @@
-<button (click)="showPopup()">show/Hide modal</button>
+<button (click)="showPopup($event)">Click me!</button>
+<button (click)="showPopup($event)">Click me!</button>
+<button (click)="showPopup($event)">Click me!</button>
 
-<div class="popup-container" [ngClass]="{ show: isPopupVisible }">
-  <div class="popup-message">
-    <button (click)="showPopup()">Click me!</button>
-    This is the pop-up message.
-  </div>
+<div
+  class="popup-container"
+  [ngClass]="{ show: isPopupVisible }"
+  [style.top.px]="popupTop"
+  [style.left.px]="popupLeft"
+>
+  <div class="popup-arrow"></div>
+  <div class="popup-message">This is the pop-up message.</div>
 </div>
